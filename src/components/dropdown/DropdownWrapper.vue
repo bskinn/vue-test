@@ -9,16 +9,19 @@ export default {
     DropdownTest1,
     DropdownTest2
   },
-  methods: {
-    setDropdown2(newValue: string) {
-      this.dropdown2 = newValue
-      console.log(`Changed to ${newValue}`)
+  computed: {
+    dropdown2_options(): Array<String> {
+      return this.dropdown2_data["Option 1"] || []
     }
   },
   data() {
     return {
       dropdown1: "Option 1",
-      dropdown2: "Option 1"
+      dropdown2: "Option 1",
+      dropdown2_data: {
+        "Option 1": ['foo', 'bar'],
+        "Option 2": ['quux', 'frob']
+    }
     }
   }
 }
@@ -27,6 +30,6 @@ export default {
 
 <template>
   <h2>This is an attempt at a container.</h2>
-  <DropdownTest1 :setSelected="dropdown1" @change="setDropdown2" />
-  <DropdownTest2 :setSelected="dropdown2"/>
+  <DropdownTest1 :setSelected="dropdown1" />
+  <DropdownTest2 :setSelected="dropdown2" :setOptions="dropdown2_options"/>
 </template>
