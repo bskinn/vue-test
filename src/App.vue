@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import DropdownWrapper from './components/dropdown/DropdownWrapper.vue';
+// import { RouterLink, RouterView } from 'vue-router'
+import DropdownCluster from './components/dropdown/DropdownCluster.vue'
+import DropdownWrapper from './components/dropdown/DropdownWrapper.vue'
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import DropdownWrapper from './components/dropdown/DropdownWrapper.vue';
     <div class="mx-20 my-10">
       
       <DropdownWrapper />
+      <DropdownCluster />
 
       <!--nav>
         <RouterLink to="/">Home</RouterLink>
