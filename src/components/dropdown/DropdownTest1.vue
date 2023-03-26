@@ -10,14 +10,15 @@ export default {
     },
     props: {
       setSelected: String
-    }
+    },
+    emits: ['DD1Change']
 }
 </script>
 
 <template>
   <h2>{{ heading }}</h2>
   <div>
-    <select v-model="selected">
+    <select v-model="selected" @change="$emit('DD1Change', selected)" class="p-2">
       <option disabled value="">Please select one</option>
       <option v-for="option in options" :key="option">{{ option }}</option>
     </select>
