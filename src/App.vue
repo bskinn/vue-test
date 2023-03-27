@@ -2,6 +2,7 @@
 // import { RouterLink, RouterView } from 'vue-router'
 import DropdownCluster from './components/dropdown/DropdownCluster.vue'
 import DropdownWrapper from './components/dropdown/DropdownWrapper.vue'
+import JsonTester from './components/JSONTester.vue'
 </script>
 
 <template>
@@ -10,6 +11,8 @@ import DropdownWrapper from './components/dropdown/DropdownWrapper.vue'
       
       <DropdownWrapper />
       <DropdownCluster />
+      <br />
+      <JsonTester file="tsconfig.json"/>
 
       <!--nav>
         <RouterLink to="/">Home</RouterLink>
