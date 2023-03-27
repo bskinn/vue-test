@@ -1,5 +1,17 @@
 # vue-test
-Sandbox for fiddling around with Vue 
+Sandbox for fiddling around with Vue
+
+Requires Node.js and npm.
+
+I *think* setup and testing should be:
+
+1. Clone repo
+2. Enter folder
+3. `$ npm install` (first time only)
+4. `$ npm run dev`
+5. Browse to `localhost:5173`
+
+----
 
 ----
 
