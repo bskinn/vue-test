@@ -1,5 +1,4 @@
 <script lang="ts">
-
 export default {
   props: {
     file: String,
@@ -21,7 +20,11 @@ export default {
     try {
       var json_obj: JSON = JSON.parse('["No JSON yet"]')
 
-      const response = await fetch(`http://localhost:${this.port}/${this.file}`)
+      const address = (this.file || '').startsWith('http')
+        ? this.file
+        : `http://localhost:${this.port}/${this.file}`
+
+      const response = await fetch(address || '')
 
       if (response.status === 200) {
         json_obj = await response.json()
@@ -34,7 +37,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <template>
