@@ -33,8 +33,8 @@ export default {
       <p>Dropdown value is: {{ dropdown3 }}</p><br />
     </div>
     <div>
-      <p>Value is: {{ input3 }}</p>
-      <input v-model="input3" class="border-1"/>
+      <p>Value is: {{ dropdown3 }}</p>
+      <input v-model="dropdown3" class="border-1 border-black"/>
     </div>
   </div>
 </template>
